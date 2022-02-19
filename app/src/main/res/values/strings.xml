@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Drawing App</string>
+    <string name="add_a_paint">Add a Paint</string>
+    <string name="options">Options</string>
+    <string name="developer_contact">Developer Contact</string>
+    <string name="exit">Exit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="large_brush">Large Brush</string>
+    <string name="medium_brush">Medium Brush</string>
+    <string name="small_brush">Small Brush</string>
+    <string name="brush">Brush</string>
+    <string name="back">Back</string>
 </resources>

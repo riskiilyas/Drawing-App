@@ -3,7 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable-v24/brush_large.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable-v24/brush_medium.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable/background_drawing_view_layout.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable/brush_small.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable/dialog_shape.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/activity_drawing.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/appbar.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/brush_size_layout.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/dev_contact_layout.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/dialog_brush_size.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/fragment_dev_contact.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/menu/menu_activity_drawing.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/DrawingApp/app/src/main/res/menu/menus.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>
