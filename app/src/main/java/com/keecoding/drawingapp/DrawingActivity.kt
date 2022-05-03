@@ -1,7 +1,9 @@
 package com.keecoding.drawingapp
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -18,7 +20,8 @@ class DrawingActivity : AppCompatActivity() {
 
         binding = ActivityDrawingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setTheme(R.style.Theme_DrawingApp)
+        window.statusBarColor = Color.BLACK
         binding.drawingView.setBrushSize(10f)
         binding.btnBrush.setOnClickListener { showBrushSizeDialog() }
     }

@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnDrawing.setOnClickListener {
             startActivity(Intent(this, DrawingActivity::class.java))
         }
+
+        binding.btnExit.setOnClickListener { finish() }
     }
 
     override fun onResume() {
