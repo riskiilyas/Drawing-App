@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AlertDialog
 import com.keecoding.drawingapp.databinding.ActivityMainBinding
 
@@ -14,14 +15,26 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setTheme(R.style.Theme_DrawingApp)
         setContentView(binding.root)
 
-        binding.fabAdd.setOnClickListener {
-            val intentDrawingActivity = Intent(this, DrawingActivity::class.java)
-            startActivity(intentDrawingActivity)
+        binding.btnDrawing.setOnClickListener {
+            startActivity(Intent(this, DrawingActivity::class.java))
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val anim = AnimationUtils.loadAnimation(this, R.anim.button_setup_anim)
+        val animFade = AnimationUtils.loadAnimation(this, R.anim.ffade_in)
+        binding.btnDrawing.startAnimation(anim)
+        binding.btnAbout.startAnimation(anim)
+        binding.btnGallery.startAnimation(anim)
+        binding.btnExit.startAnimation(anim)
+        binding.textView.startAnimation(animFade)
+        binding.textView2.startAnimation(animFade)
+        binding.btnSound.startAnimation(animFade)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

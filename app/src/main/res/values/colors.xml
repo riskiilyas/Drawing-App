@@ -12,10 +12,10 @@
 
     <!--Day Theme-->
     <color name="fabColorDay">#2B67FF</color>
-    <color name="statusBarColorDay">#2B67FF</color>
+    <color name="statusBarColorDay">#C6FBFF</color>
 
     <!--Night Theme-->
     <color name="fabColorNight">#1A2859</color>
-    <color name="statusBarColorNight">#1A2859</color>
+    <color name="statusBarColorNight">#C6FBFF</color>
 
 </resources>
