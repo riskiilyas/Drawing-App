@@ -7,6 +7,17 @@
     android:background="@drawable/main_wp"
     tools:context=".DrawingActivity">
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewDrawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.keecoding.drawingapp.customview.DrawingView
         android:id="@+id/drawing_View"
         android:layout_width="0dp"
@@ -16,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@id/layoutColors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/adViewDrawing" />
 
     <LinearLayout
         android:id="@+id/layoutColors"
@@ -36,6 +47,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="@string/brush"
+        android:backgroundTint= "#E3E3E3"
         android:scaleType="fitXY"
         android:src="@drawable/img_brush"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,4 +56,78 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageButton
+        android:id="@+id/btnFill"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint= "#E3E3E3"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBrush"
+        app:layout_constraintEnd_toStartOf="@+id/btnBrush"
+        app:layout_constraintTop_toTopOf="@+id/btnBrush"/>
+
+    <View
+        android:id="@+id/colorSel"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnBrush"
+        app:layout_constraintStart_toStartOf="@+id/btnFill"
+        app:layout_constraintTop_toTopOf="@+id/btnFill" />
+
+    <ImageButton
+        android:id="@+id/btnSaveD"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:backgroundTint= "#E3E3E3"
+        android:src="@drawable/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnFill"
+        app:layout_constraintTop_toTopOf="@+id/btnFill" />
+
+    <ImageButton
+        android:id="@+id/btnErase"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:backgroundTint= "#E3E3E3"
+        android:src="@drawable/eraser"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBrush"
+        app:layout_constraintStart_toEndOf="@+id/btnBrush"
+        app:layout_constraintTop_toTopOf="@+id/btnBrush" />
+
+    <ImageButton
+        android:id="@+id/btnUndo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint= "#E3E3E3"
+        android:src="@drawable/ic_baseline_undo_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnErase"
+        app:layout_constraintTop_toTopOf="@+id/btnErase"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/btnRedo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint= "#E3E3E3"
+        android:src="@drawable/ic_baseline_redo_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUndo"
+        app:layout_constraintStart_toEndOf="@+id/btnUndo"
+        app:layout_constraintTop_toTopOf="@+id/btnUndo"
+        app:tint="@color/black" />
+
+    <ImageButton
+        android:id="@+id/btnHomeD"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint= "#E3E3E3"
+        android:src="@drawable/ic_baseline_home_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSaveD"
+        app:layout_constraintEnd_toStartOf="@+id/btnSaveD"
+        app:layout_constraintTop_toTopOf="@+id/btnSaveD"
+        app:tint="@color/black" />
 </androidx.constraintlayout.widget.ConstraintLayout>

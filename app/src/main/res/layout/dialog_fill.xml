@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@drawable/dialog_shape">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:text="Pick A Color!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fillRed"
+                android:padding="4dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Red"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/red" />
+
+            <ImageView
+                android:id="@+id/fillYellow"
+                android:padding="4dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Yellow"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/yellow" />
+
+            <ImageView
+                android:id="@+id/fillLime"
+                android:padding="4dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Lime"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/lime" />
+
+            <ImageView
+                android:id="@+id/fillCyan"
+                android:padding="4dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Cyan"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/cyan" />
+
+            <ImageView
+                android:id="@+id/fillPurple"
+                android:layout_width="40dp"
+                android:padding="4dp"
+                android:layout_height="40dp"
+                android:contentDescription="Purple"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/purple" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fillPink"
+                android:layout_width="40dp"
+                android:padding="4dp"
+                android:layout_height="40dp"
+                android:contentDescription="Pink"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/pink" />
+
+            <ImageView
+                android:id="@+id/fillOrange"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="Orange"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/orange" />
+
+            <ImageView
+                android:id="@+id/fillGreen"
+                android:layout_width="40dp"
+                android:padding="4dp"
+                android:layout_height="40dp"
+                android:contentDescription="Green"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/green" />
+
+            <ImageView
+                android:id="@+id/fillBlue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="4dp"
+                android:contentDescription="Blue"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/blue" />
+
+            <ImageView
+                android:id="@+id/fillBlack"
+                android:padding="4dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Black"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle"
+                app:tint="@color/blackf" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:text="Confirm"
+        android:textColor="@color/white"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancelFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#5A5A5A"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSaveFill"
+        app:layout_constraintEnd_toStartOf="@+id/btnSaveFill"
+        app:layout_constraintTop_toTopOf="@+id/btnSaveFill" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

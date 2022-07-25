@@ -18,9 +18,14 @@ class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs
     private var selectedColor = Color.BLACK
     private var canvas : Canvas? = null
     private val mPaths = ArrayList<CustomPath>()
+    private val redoPaths = ArrayList<CustomPath>()
 
     init {
         setUpDrawing()
+    }
+
+    fun setColor(selectedC: Int) {
+        selectedColor = selectedC
     }
 
     private fun setUpDrawing() {
@@ -97,6 +102,32 @@ class DrawingView(context : Context, attrs : AttributeSet) : View(context, attrs
     fun setBrushSize(newSize : Float){
         mBrushSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newSize, resources.displayMetrics)
         mDrawPaint!!.strokeWidth = mBrushSize
+    }
+
+    fun eraseMode() {
+        selectedColor = Color.WHITE
+    }
+
+    fun undo() {
+        mPaths.removeLastOrNull()?.let {
+            redoPaths.add(it)
+            invalidate()
+        }
+    }
+
+    fun redo() {
+        redoPaths.removeLastOrNull()?.let {
+            mPaths.add(it)
+            invalidate()
+        }
+    }
+
+    fun saveToBitmap(): Bitmap {
+        val b = Bitmap.createBitmap(measuredWidth, measuredHeight, Bitmap.Config.ARGB_8888)
+        val c = Canvas(b)
+        layout(left, top, right, bottom)
+        draw(c)
+        return b
     }
 
     internal inner class CustomPath(var color: Int, var brushThickness : Float) : Path()

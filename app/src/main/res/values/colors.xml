@@ -9,7 +9,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
-
+    <color name="selectedColor">#C1C1C1</color>
     <!--Day Theme-->
     <color name="fabColorDay">#2B67FF</color>
     <color name="statusBarColorDay">#C6FBFF</color>
@@ -17,5 +17,17 @@
     <!--Night Theme-->
     <color name="fabColorNight">#1A2859</color>
     <color name="statusBarColorNight">#C6FBFF</color>
+
+    <!-- Color Fill -->
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFF200</color>
+    <color name="lime">#19FF00</color>
+    <color name="cyan">#00F7FF</color>
+    <color name="purple">#6B00FF</color>
+    <color name="pink">#FF00D5</color>
+    <color name="orange">#FF8D00</color>
+    <color name="green">#00710F</color>
+    <color name="blue">#0041A1</color>
+    <color name="blackf">#000000</color>
 
 </resources>
