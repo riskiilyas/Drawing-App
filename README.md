@@ -1,3 +1,3 @@
 # Simple Weather App
 
-![](static/draw_app.gif)
+![](https://github.com/riskiilyas/Drawing-App/blob/master/static/ss.gif?raw=true)
