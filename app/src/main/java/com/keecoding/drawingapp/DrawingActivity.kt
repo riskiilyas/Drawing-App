@@ -140,7 +140,7 @@ class DrawingActivity : AppCompatActivity() {
     fun saveMediaToStorage(bitmap: Bitmap) {
         //Generating a file name
         val filename = "${System.currentTimeMillis()}.jpg"
-
+        var imageS = ""
         //Output stream
         var fos: OutputStream? = null
 
@@ -163,6 +163,7 @@ class DrawingActivity : AppCompatActivity() {
                     resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
 
                 //Opening an outputstream with the Uri that we got
+                imageS = imageUri?.path ?: "Gallery"
                 fos = imageUri?.let { resolver.openOutputStream(it) }
             }
         } else {
@@ -171,13 +172,14 @@ class DrawingActivity : AppCompatActivity() {
             val imagesDir =
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES + "/Drawing App")
             val image = File(imagesDir, filename)
+            imageS = image.path
             fos = FileOutputStream(image)
         }
 
         fos?.use {
             //Finally writing the bitmap to the output stream that we opened
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, it)
-            Toast.makeText(this, "Saved To Virtual Gallery!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Saved To $imageS.jpg", Toast.LENGTH_SHORT).show()
         }
     }
 }

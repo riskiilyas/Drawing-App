@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnGallery.setOnClickListener {
 //            startActivity(Intent(this, VirtualGalleryActivity::class.java))
-            val path = Environment.getExternalStorageDirectory().toString() + "/" + "Pictures" + "/"
+            val path = Environment.getExternalStorageDirectory().toString() + "/"
             val file = File(filesDir, "myFile")
 
             val uri = Uri.parse(path)

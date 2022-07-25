@@ -41,6 +41,7 @@ object SharedPref {
             sharedPreferences?.edit()?.putBoolean("MUSIC", value)?.apply()
             if (isMusicOn) {
                 Log.d("aaa", "$isMusicOn")
+                MusicPlayer.play()
                 MusicPlayer.reset()
                 MusicPlayer.play()
             } else {
